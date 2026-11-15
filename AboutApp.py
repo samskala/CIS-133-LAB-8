@@ -33,6 +33,8 @@ if __name__ == '__main__':
     import tkinter as tk
 
     root = tk.Tk()
+    root.geometry("400x200")
+    root.title("About")
     app = AboutApp(root)
     app.run()
 

@@ -1,24 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<interface version="1.1">
+<interface version="1.5" author="PygubuDesigner 0.41.4">
+  <project>
+    <settings />
+    <customwidgets />
+    <resources />
+  </project>
   <object class="ttk.Frame" id="top_frame">
     <property name="height">200</property>
     <property name="padding">10</property>
     <property name="width">200</property>
     <layout manager="grid">
       <property name="column">0</property>
-      <property name="propagate">True</property>
       <property name="row">0</property>
       <property name="sticky">nsew</property>
-      <property type="col" id="0" name="weight">1</property>
-      <property type="row" id="0" name="weight">1</property>
     </layout>
+    <containerlayout manager="grid">
+      <property type="col" id="0" name="weight">1</property>
+      <property type="row" id="5" name="weight">1</property>
+    </containerlayout>
     <child>
       <object class="ttk.Label" id="label6">
         <property name="font">{Arial} 16 {bold}</property>
         <property name="text" translatable="yes">Team Calculator Project</property>
-        <layout manager="grid">
-          <property type="col" id="0" name="weight">1</property>
-        </layout>
+        <layout manager="grid" />
       </object>
     </child>
     <child>
@@ -27,33 +31,38 @@
         <property name="width">200</property>
         <layout manager="grid">
           <property name="column">0</property>
-          <property name="propagate">True</property>
-          <property name="row">5</property>
-          <property type="col" id="0" name="weight">1</property>
-          <property type="row" id="5" name="weight">1</property>
+          <property name="row">1</property>
         </layout>
         <child>
           <object class="ttk.Label" id="label7">
-            <property name="text" translatable="yes">Featuring an About tab</property>
+            <property name="text" translatable="yes">Featuring an About tab,</property>
             <layout manager="pack" />
           </object>
         </child>
         <child>
           <object class="ttk.Label" id="label8">
-            <property name="text" translatable="yes">and a Heartbeat to Seconds Calculator.	</property>
+            <property name="text" translatable="yes">a Heartbeat to Seconds Calculator,</property>
             <layout manager="pack" />
           </object>
         </child>
         <child>
           <object class="ttk.Label" id="label9">
-            <property name="text" translatable="yes">By Person 1 Sam M</property>
+            <property name="text" translatable="yes">and a Minutes to Heartbeats Calculator.</property>
             <layout manager="pack" />
           </object>
         </child>
         <child>
           <object class="ttk.Label" id="label10">
-            <property name="text" translatable="yes">And Person 2 Josh ?</property>
+            <property name="text" translatable="yes">By Person 1 Sam M</property>
             <layout manager="pack" />
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label1">
+            <property name="text" translatable="yes">And Person 2 Josh M</property>
+            <layout manager="pack">
+              <property name="side">top</property>
+            </layout>
           </object>
         </child>
       </object>

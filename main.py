@@ -1,8 +1,20 @@
+# *******************************************************************************
+# Author:          Sam M and Josh M
+# Assignment:      Lab 8
+# Date:            11/14/2026
+# Description:     Prompts the user to convert measurements between Heartbeats
+#                   and Seconds, or Minutes and Heartbeats.
+# Input:           Number of Heartbeats, Number of Minutes
+# Output:          Converted measurements to Seconds or to Heartbeats
+# Sources: Python textbook Murach 3rd ed, class material, and Lab 8 examples
+# *******************************************************************************
+
 import tkinter as tk
 import tkinter.ttk as ttk
 
 from AboutApp import AboutApp
 from HeartbeatToSecondsApp import HeartbeatToSecondsApp
+from MinutesToHeartbeatsApp import MinutesToHeartbeatsApp
 
 # Main Window for the team calculator project.
 # To add a new tab, create an App object with a get_top_frame method.
@@ -32,11 +44,16 @@ class MainApp:
         heartbeat_to_seconds_app = HeartbeatToSecondsApp(self.__mainwindow)
         self.__main_notebook.add(heartbeat_to_seconds_app.get_top_frame(), text="Heartbeat to seconds")
 
+        minutes_to_heartbeats_app = MinutesToHeartbeatsApp(self.__mainwindow)
+        self.__main_notebook.add(minutes_to_heartbeats_app.get_top_frame(), text="Minutes to Heartbeats")
+
     def run(self):
         self.__mainwindow.mainloop()
 
 if __name__ == '__main__':
     root = tk.Tk()
+    root.geometry("400x250")
+    root.title("Team Calculator Lab")
     app = MainApp(root)
     app.run()
 
