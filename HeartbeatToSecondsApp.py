@@ -1,3 +1,13 @@
+# *******************************************************************************
+# Author:          Sam M
+# Assignment:      Lab 8
+# Date:            11/14/2026
+# Description:     Prompts the user to convert measurements between Heartbeats
+#                   and Seconds, or Minutes and Heartbeats.
+# Input:           Number of Heartbeats, Number of Minutes
+# Output:          Converted measurements to Seconds or to Heartbeats
+# Sources: Python textbook Murach 3rd ed, class material, and Lab 8 examples
+# *******************************************************************************
 import os
 import pygubu
 
@@ -9,11 +19,7 @@ PROJECT_UI = os.path.join(PROJECT_PATH, "heartbeat_to_seconds.ui")
 
 
 class HeartbeatToSecondsApp:
-    heartbeats_per_second = .7
-
-    # This class implements a simple calculator to convert heartbeats to seconds.
-    # It can either be run as a stand-alone app (run HeartbeatToSecondsApp.py directly)
-    # or within a tabbed notebook (run main.py and select the Grams to Ounces tab).
+    heartbeats_per_second = 1.2
 
     def __init__(self, master):
 
