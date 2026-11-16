@@ -1,6 +1,19 @@
+# ****************************************************************************
+# Author:          Sam M and Josh M
+# Assignment:      Lab 8
+# Date:            11/14/2026
+# Description:     Prompts the user to convert measurements between Heartbeats
+#                   and Seconds, or Minutes and Heartbeats.
+# Input:           Number of Heartbeats, Number of Minutes
+# Output:          Converted measurements to Seconds or to Heartbeats
+# Sources: Python textbook Murach 3rd ed, class material, and Lab 8 examples
+# ****************************************************************************
+
+# Import necessary pacakges
 import os
 import pygubu
 
+# Initialize global variables for locating the UI file
 PROJECT_PATH = os.path.dirname(__file__)
 PROJECT_UI = os.path.join(PROJECT_PATH, "about.ui")
 
@@ -13,8 +26,8 @@ class AboutApp:
 
     def __init__(self, master):
 
-        # Boilerplate from pygubu-designer. Renamed builder and mainwindow to use
-        # name mangling.
+        # Boilerplate from pygubu-designer. Renamed builder and mainwindow to
+        #  use name mangling.
         self.__builder = builder = pygubu.Builder()
         builder.add_resource_path(PROJECT_PATH)
         builder.add_from_file(PROJECT_UI)
@@ -22,13 +35,18 @@ class AboutApp:
         builder.connect_callbacks(self)
 
     def get_top_frame(self):
-        # Return the top frame for the app so that it can be displayed in a tabbed notebook.
+        # Return the top frame for the app so that it can be displayed in a
+        #  tabbed notebook.
         return self.__mainwindow
 
+    # Function for creating the main application loop
     def run(self):
         self.__mainwindow.mainloop()
 
 
+# If this file is run as a standalone app, build a base tkinter window with
+#  the window size and title as defined and pass that to a AboutApp instance
+#  to be run as the main application loop
 if __name__ == '__main__':
     import tkinter as tk
 
